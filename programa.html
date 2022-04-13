@@ -15,15 +15,29 @@
         var pantalla = document.querySelector("canvas"); //Conecta la etiqueta canvas con javascript
         var pincel = pantalla.getContext("2d"); //Trae la información de la pantalla y la guarda en una variable ( se está trabajando en 2dimensiones)
         
-        // pincel.fillStyle = "lightgrey" //propiedad 
-        // pincel.fillRect(0,0,600,400);//Se rellena con la función fill los dos primeros parametros son el inicio(x,y) , y lo segun de cuanto avanza hacia al el lado y hacia abajo
+        pincel.fillStyle = "lightgrey"; //propiedad 
+        pincel.fillRect(0,0,600,400);//Se rellena con la función fill los dos primeros parametros son el inicio(x,y) , y lo segun de cuanto avanza hacia al el lado y hacia abajo
     
-        pincel.fillStyle = "green" //propiedad 
+        pincel.fillStyle = "green"; //propiedad 
         pincel.fillRect(0,0,200,400);
 
-        pincel.fillStyle = "red" //propiedad 
+        pincel.fillStyle = "red"; //propiedad 
         pincel.fillRect(400,0,200,400);
-        
+
+        //Para mover el pincel y crear un triangulo escudo
+        pincel.fillStyle = "yellow" //propiedad 
+        pincel.beginPath(); //Comenzar un nuevo camino
+        pincel.moveTo(300,200); // que el pincel se mueva a otra coordenada
+        pincel.lineTo(200,400); //Dibuja una linea hasta esa coordenada
+        pincel.lineTo(400,400);//Dibuja otra linea a esa coordenada
+        pincel.fill(); //Se rellena lo dibujado
+
+        //Para crear una circunferencia en otro sector
+        pincel.fillStyle = "blue" //propiedad 
+        pincel.beginPath(); //Comenzar un nuevo camino
+        pincel.arc(300,200,50,0,2*3.14); //Crear un circulo (X,Y,tamaño en radio,angulo inicial,angulo final)
+        pincel.fill();
+
     </script>
     
 </body>
