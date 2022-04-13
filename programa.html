@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primer Programa Canvas</title>
+</head>
+<body>
+    <canvas width="600" height="400">
+
+    </canvas>
+
+    <script>
+        var pantalla = document.querySelector("canvas"); //Conecta la etiqueta canvas con javascript
+        var pincel = pantalla.getContext("2d"); //Trae la información de la pantalla y la guarda en una variable ( se está trabajando en 2dimensiones)
+        
+        // pincel.fillStyle = "lightgrey" //propiedad 
+        // pincel.fillRect(0,0,600,400);//Se rellena con la función fill los dos primeros parametros son el inicio(x,y) , y lo segun de cuanto avanza hacia al el lado y hacia abajo
+    
+        pincel.fillStyle = "green" //propiedad 
+        pincel.fillRect(0,0,200,400);
+
+        pincel.fillStyle = "red" //propiedad 
+        pincel.fillRect(400,0,200,400);
+    </script>
+    
+</body>
+</html>
